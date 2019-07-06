@@ -1,174 +1,309 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" >
-  <head><title>
-	default
-</title><meta name="msapplication-tap-highlight" content="no" /><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui" /><meta name="apple-mobile-web-app-capable" content="yes" /><meta name="mobile-web-app-capable" content="yes" /><meta name="format-detection" content="telephone=no" /><link type="image/x-icon" rel="shortcut icon" href="favicon.png" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta http-equiv="Content-Script-Type" content="text/javascript" /><meta http-equiv="Content-Style-Type" content="text/css" />
-<style>
-.OSFillParent { 
- display: block;
- width: 100%;
-}
-table.OSFillParent {
- display: table;
-}
-input.OSFillParent,
-button.OSFillParent,
-select.OSFillParent,
-textarea.OSFillParent {
- display: inline-block;
- box-sizing: border-box;
- -moz-box-sizing: border-box;
- -webkit-box-sizing: border-box;
-}
-.OSInline {
- display: inline-block;
- *zoom: 1;
- *display: inline;
- vertical-align: top;
-}
-table.OSInline {
- display: inline-table;
-}
-.OSAutoMarginTop {
- margin-top: 10px;
-}
-table[class*="ThemeGrid_Width"] {
- display: inline-table;
- vertical-align: top;
-}
-div[class*="ThemeGrid_Width"] {
- vertical-align: top;
-}
-th[class*="ThemeGrid_Width"],
-td[class*="ThemeGrid_Width"] {
- display: table-cell;
-}
-[class*="ThemeGrid_Width"] {
- display: inline-block;
- box-sizing: border-box;
- -webkit-box-sizing: border-box;
- -moz-box-sizing: border-box;
- *zoom: 1;
- *display: inline;
-}
-.ThemeGrid_Container {
- box-sizing: border-box;
- -webkit-box-sizing: border-box;
- -moz-box-sizing: border-box;
-}
-
-</style>
-<link href="/OutSystemsUIWeb/Blocks/OutSystemsUIWeb/Private/ServiceStudioPreview.css?42" type="text/css" rel="stylesheet" />
-<link href="/RichWidgets/Blocks/RichWidgets/RichWidgets/Feedback_AjaxWait.css?12" type="text/css" rel="stylesheet" />
-<link href="/RichWidgets/Blocks/RichWidgets/jQueryUI/jQueryUIInternal.css?12" type="text/css" rel="stylesheet" />
-<link href="/RichWidgets/Blocks/RichWidgets/RichWidgets/Feedback_Message.css?12" type="text/css" rel="stylesheet" />
-<link href="/RichWidgets/Blocks/RichWidgets/RichWidgets/Icon.css?12" type="text/css" rel="stylesheet" />
-    <link href="Theme.TICSMobile.css?124" type="text/css" rel="stylesheet" />
-    <link href="Theme.TICSMobile.extra.css?124" type="text/css" rel="stylesheet" />
-    <script id="_OSrequestInfoScript" type="text/javascript">(function(global) { global.outsystems = global.outsystems || {};global.outsystems.internal = global.outsystems.internal || {};global.outsystems.internal.requestInfo = {visitorKey:'1ad48c37-de3d-48c4-8147-88e198d6348e',visitKey:'125dcdf1-045d-49f6-a62d-f1d9cee3777e',sessionKey:'9cbf0845-5fe2-92e8-e00a-7df6e0e06b83',userKey:'',requestKey:'ac398d15-3b85-490f-8da2-0741e8ed4afd',webScreenKey:'45831b5f-d294-4394-904f-38858af0e903',webScreenName:'default',espaceKey:'b4d37fb7-314a-49ee-af10-9283b76622c5',espaceName:'TICSMobile',applicationKey:'d19e87ca-06df-4f88-9134-8320a7bf02ba',applicationName:'TICSMobile',tenantKey:'b4882d2f-7175-633c-afdb-6430c1f12b86',tenantName:'Users',environmentKey:'814748dd-98ba-4483-9741-8d28deb24967',environmentName:'Development',frontendKey:'$1$cSbiq+NtUDG55I8dW2hQeA==PcbyGsGM3xHLai90CoPNjQ=='}})(this);</script>
-    <script src="_osjs.js?11_0_118_0" type="text/javascript" charset="UTF-8"></script>
-    <script src="/TICSMobile/Blocks/OutSystemsUIWeb/Private/DeviceDetection.en.js?42" type="text/javascript" charset="UTF-8"></script>
-    <script src="/TICSMobile/Blocks/OutSystemsUIWeb/Private/CSSVarsPonyfill.en.js?42" type="text/javascript" charset="UTF-8"></script>
-    <script src="/TICSMobile/Blocks/OutSystemsUIWeb/Libraries/JSON5_2_1_0.en.js?42" type="text/javascript" charset="UTF-8"></script>
-    <script src="/TICSMobile/Blocks/RichWidgets/RichWidgets/Feedback_AjaxWait.en.js?12" type="text/javascript" charset="UTF-8"></script>
-    <script src="/TICSMobile/Blocks/RichWidgets/jQueryUI/jQueryUIInternal.en.js?12" type="text/javascript" charset="UTF-8"></script>
-    <script src="/TICSMobile/Blocks/RichWidgets/jQueryUI/jQueryComponents.en.js?12" type="text/javascript" charset="UTF-8"></script>
-    <script src="/TICSMobile/Blocks/RichWidgets/RichWidgets/Feedback_Message.en.js?12" type="text/javascript" charset="UTF-8"></script>
-    <script src="/TICSMobile/Blocks/OutSystemsUIWeb/Layouts/LayoutWidgets.en.js?42" type="text/javascript" charset="UTF-8"></script>
-    <script src="/TICSMobile/Blocks/OutSystemsUIWeb/Layouts/LayoutMenuTop.en.js?42" type="text/javascript" charset="UTF-8"></script>
-    <script src="/TICSMobile/Blocks/OutSystemsUIWeb/Content/Accordion.en.js?42" type="text/javascript" charset="UTF-8"></script>
-
+<head>
+<title>
+default
+</title>
 </head>
-  <body>
-    <form method="post" action="default.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="WebForm1" name="WebForm1">
-<div class="aspNetHidden">
-<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
-<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__OSVSTATE" id="__OSVSTATE" value="0mczMBPO7nl9B54u//FDLFpWbATorUJz/sGAP5LX+qxX8jfsAXq7tVpGfJ6j82EGZftuOMF6v+bGeiF5fJ/ZTAHno06rIlc1o8DFFLCduoadaRzggkkqB2Krr1niZhgYpsR8LACz0iUXCcovApXjiuXtUZuRUku2r7vXMaORrIcrlVNlORp04nW3bOjHuVd2RoKeUa3TxCo1j0ZBK9J8vw==" />
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="" />
-</div>
-
-<script type="text/javascript">
-//<![CDATA[
-var theForm = document.forms['WebForm1'];
-if (!theForm) {
-    theForm = document.WebForm1;
-}
-function __doPostBack(eventTarget, eventArgument) {
-    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
-        theForm.__EVENTTARGET.value = eventTarget;
-        theForm.__EVENTARGUMENT.value = eventArgument;
-        theForm.submit();
-    }
-}
-//]]>
-</script>
-
-
-<script type="text/javascript">
-//<![CDATA[
-function WebForm_OnSubmit() {
-OsPrepareCheckboxesForSubmit();
-OsFixUploadBeforeSubmit();
-if (!OsValidatorOnSubmit()) return false;
-return true;
-}
-//]]>
-</script>
-
-<div class="aspNetHidden">
-
-	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="87D671BF" />
-</div>
-<div ><script>
-    var deviceDetect = new deviceDetection();
-
-    deviceDetect.init(420, 1024 , 
-                1366, 1600 ,
-                1920);
-</script><div  id="wt59_OutSystemsUIWeb_wt2_block_wt1_RichWidgets_wt15_block_wtdivWait" class="Feedback_AjaxWait" style="display:none"><img alt="" src="data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" style="height:16px;width:16px;" /> Loading...</div ><script type='text/javascript'>
-     RichWidgets_Feedback_AjaxWait_init('wt59_OutSystemsUIWeb_wt2_block_wt1_RichWidgets_wt15_block_wtdivWait');
- </script><span id="wt59_OutSystemsUIWeb_wt2_block_wt1_RichWidgets_wt7_block"><script type='text/javascript'>
-OsRegisterExceptionHandler(RichWidgets_Feedback_Message_ErrorHandler)
-</script><div  id="wt59_OutSystemsUIWeb_wt2_block_wt1_RichWidgets_wt7_block_wtFeedback_Wrapper" class="Feedback_Message_Wrapper"><span id="wt59_OutSystemsUIWeb_wt2_block_wt1_RichWidgets_wt7_block_wtnotify"><span class="NotifyWidget"></span><SCRIPT type="text/javascript">
-//<![CDATA[
-RichWidgets_Feedback_Message_notifyWidget ='wt59_OutSystemsUIWeb_wt2_block_wt1_RichWidgets_wt7_block_wtnotify';
-//]]>
-</SCRIPT></span></div ></span><div  class="hidden"><span class="fa fa-fw fa-angellist"></span></div ></div ><div  class="layout layout-top "><div  class="main"><header  id="wt59_OutSystemsUIWeb_wt2_block_wtHeader" class="header" role="banner"><div  class="ThemeGrid_Container"><div  class="header-top display-flex"><div  class="menu-icon"><div  class="menu-icon-line"></div ><div  class="menu-icon-line"></div ><div  class="menu-icon-line"></div ></div ><div  id="wt59_OutSystemsUIWeb_wt2_block_wtHeader_wtLeft" class="header-left display-flex align-items-center ph"></div ><div  id="wt59_OutSystemsUIWeb_wt2_block_wtHeader_wtCenter" class="header-center display-flex align-items-center flex1"></div ><div  id="wt59_OutSystemsUIWeb_wt2_block_wtHeader_wtRight" class="header-right display-flex align-items-center ph"></div ></div ><div  id="wt59_OutSystemsUIWeb_wt2_block_wtHeader_wtHeaderContent" class="header-content"></div ></div ></header ><div  id="wt59_OutSystemsUIWeb_wt2_block_wtContent" class="content"><main  class="main-content ThemeGrid_Container" role="main"><div  id="wt59_OutSystemsUIWeb_wt2_block_wtContent_wtBreadcrumbs" class="content-breadcrumbs ph"></div ><div  class="content-top display-flex align-items-center"><div  id="wt59_OutSystemsUIWeb_wt2_block_wtContent_wtTitle" class="content-top-title heading1 ph">Aplicativos Mobile de sa&#250;de mais baixados no GooglePlay</div ><div  id="wt59_OutSystemsUIWeb_wt2_block_wtContent_wtActions" class="content-top-actions ph"><div  class="separator separator-horizontal margin-y-base background-secondary"></div ></div ></div ><div  id="wt59_OutSystemsUIWeb_wt2_block_wtContent_wtMainContent" class="content-middle"><div  class="columns columns-small-left gutter-l tablet-break-none phone-break-all"><div  id="wt59_OutSystemsUIWeb_wt2_block_wtContent_wtMainContent_OutSystemsUIWeb_wt85_block_wtColumn1" class="columns-item"><div  id="wt59_OutSystemsUIWeb_wt2_block_wtContent_wtMainContent_OutSystemsUIWeb_wt85_block_wtColumn1_OutSystemsUIWeb_wt47_block_wtContent" class="card"><div ><span style="font-size: 20px; font-style: normal; font-weight: bold;">Links:</span></div ><div  align="left"><div  align="center" style="border-color: #0059ff; border-style: solid; border-width: 0px;"><a id="wt59_OutSystemsUIWeb_wt2_block_wtContent_wtMainContent_OutSystemsUIWeb_wt85_block_wtColumn1_OutSystemsUIWeb_wt47_block_wtContent_wt36" tabindex="5" href="https://play.google.com/store/apps/details?id=br.gov.datasus.cnsdigital"><img alt="" src="/TICSMobile/img/Image1.png?124" style="height: 25px;" /></a><div >Meu digiSUS</div ></div ><div  align="center"><br/></div ><div  align="center" style="border-color: #0059ff; border-style: solid; border-width: 0px;"><a id="wt59_OutSystemsUIWeb_wt2_block_wtContent_wtMainContent_OutSystemsUIWeb_wt85_block_wtColumn1_OutSystemsUIWeb_wt47_block_wtContent_wt141" tabindex="6" href="https://play.google.com/store/apps/details?id=br.com.gndi.beneficiario.gndieasy"><img alt="" src="/TICSMobile/img/Image2.png?124" style="height: 25px;" /></a><div  align="center">GNDI Easy</div ></div ><div ><br/></div ><div  align="center" style="border-color: #0059ff; border-style: solid; border-width: 0px;"><a id="wt59_OutSystemsUIWeb_wt2_block_wtContent_wtMainContent_OutSystemsUIWeb_wt85_block_wtColumn1_OutSystemsUIWeb_wt47_block_wtContent_wt32" tabindex="7" href="https://play.google.com/store/apps/details?id=com.szyk.myheart"><img alt="" src="/TICSMobile/img/Image3.png?124" style="height: 25px;" /></a><div >Press&#227;o Arterial</div ></div ><div ><br/></div ><div  align="center" style="border-color: #0059ff; border-style: solid; border-width: 0px;"><a id="wt59_OutSystemsUIWeb_wt2_block_wtContent_wtMainContent_OutSystemsUIWeb_wt85_block_wtColumn1_OutSystemsUIWeb_wt47_block_wtContent_wt105" tabindex="8" href="https://play.google.com/store/apps/details?id=com.freestylelibre.app.br"><img alt="" src="/TICSMobile/img/Image4.png?124" style="height: 25px;" /></a><div >FreeStyle LibreLink</div ></div ><div ><br/></div ><div  align="center" style="border-color: #0059ff; border-style: solid; border-width: 0px;"><div  align="center"><a id="wt59_OutSystemsUIWeb_wt2_block_wtContent_wtMainContent_OutSystemsUIWeb_wt85_block_wtColumn1_OutSystemsUIWeb_wt47_block_wtContent_wt107" tabindex="9" href="https://play.google.com/store/apps/details?id=saude.prefeitura.sp.gov.br.autoagendamento"><img alt="" src="/TICSMobile/img/Image5.png?124" style="height: 25px;" /></a></div ><div  align="center">Agenda F&#225;cil</div ></div ></div ></div ></div ><div  id="wt59_OutSystemsUIWeb_wt2_block_wtContent_wtMainContent_OutSystemsUIWeb_wt85_block_wtColumn2" class="columns-item"><div  id="wt59_OutSystemsUIWeb_wt2_block_wtContent_wtMainContent_OutSystemsUIWeb_wt85_block_wtColumn2_OutSystemsUIWeb_wt53_block_wtContent" class="accordion" data-active-item="-1" role="tablist"><div  id="wt59_OutSystemsUIWeb_wt2_block_wtContent_wtMainContent_OutSystemsUIWeb_wt85_block_wtColumn2_OutSystemsUIWeb_wt53_block_wtContent_OutSystemsUIWeb_wt134_block_wtAccordionItemWrapper" class="accordion-item is--closed" aria-expanded="false"><div  class="accordion-item-header" role="tab" tabindex="0" aria-hidden="false" aria-expanded="false"><div  id="wt59_OutSystemsUIWeb_wt2_block_wtContent_wtMainContent_OutSystemsUIWeb_wt85_block_wtColumn2_OutSystemsUIWeb_wt53_block_wtContent_OutSystemsUIWeb_wt134_block_wtTitle" class="accordion-item-title" role="button" aria-controls="wt59_OutSystemsUIWeb_wt2_block_wtContent_wtMainContent_OutSystemsUIWeb_wt85_block_wtColumn2_OutSystemsUIWeb_wt53_block_wtContent_OutSystemsUIWeb_wt134_block_wtContent"><div  align="center"><span style="font-size: 24px; font-weight: bold;">Meu digiSUS</span></div ></div ><div  class="accordion-item-icon" aria-hidden="true"><span class="fa fa-fw fa-angle-down"></span></div ></div ><div  id="wt59_OutSystemsUIWeb_wt2_block_wtContent_wtMainContent_OutSystemsUIWeb_wt85_block_wtColumn2_OutSystemsUIWeb_wt53_block_wtContent_OutSystemsUIWeb_wt134_block_wtContent" class="accordion-item-content is--collapsed" role="tabpanel" tabindex="0" aria-labelledby="wt59_OutSystemsUIWeb_wt2_block_wtContent_wtMainContent_OutSystemsUIWeb_wt85_block_wtColumn2_OutSystemsUIWeb_wt53_block_wtContent_OutSystemsUIWeb_wt134_block_wtTitle" aria-hidden="true"><div  align="center"><img alt="" src="/TICSMobile/img/Image1.png?124" /></div ><div  align="left"><div ><br/><span style="font-weight: bold;">Descri&#231;&#227;o</span>:<br/>O Meu digiSUS &#233; a nova plataforma m&#243;vel e de servi&#231;os digitais oficial do Minist&#233;rio da Sa&#250;de, onde o cidad&#227;o ter&#225; acesso &#224;s suas principais informa&#231;&#245;es de sa&#250;de, destacando-se:<br/><br/><span style="font-weight: bold;">Fun&#231;&#245;es</span>:<br/>- &quot;Atendimento SUS” &#233; poss&#237;vel visualizar os agendamentos de consultas e procedimentos realizados pelo cidad&#227;o na aten&#231;&#227;o b&#225;sica, m&#233;dia e de alta complexidade (SISREG). O aplicativo permite que os atendimentos sejam avaliados ou, ainda, que o Minist&#233;rio da Sa&#250;de seja informado quando o atendimento n&#227;o for realizado.<br/>- &quot;Minha Sa&#250;de&quot; mostra as informa&#231;&#245;es gerais do cidad&#227;o, como lista de medicamentos que foram recebidos pelo programa &quot;Aqui tem Farm&#225;cia Popular&quot;, lista de vacinas recebidas e outras novidades, dentre as quais se destacam a possibilidade de consultar a posi&#231;&#227;o na lista de transplantes e denunciar o lan&#231;amento indevido de medicamentos em seu nome.<br/>- &quot;Servi&#231;os de Sa&#250;de&quot; permite consultar estabelecimentos de sa&#250;de pr&#243;ximos a sua localidade ou pelo tipo, al&#233;m de permitir adicionar aos favoritos os mais relevantes.  <br/><br/><span style="font-weight: bold;">Link</span> :<br/> https://play.google.com/store/apps/details?id=br.gov.datasus.cnsdigital </div ></div ></div ></div ><div  id="wt59_OutSystemsUIWeb_wt2_block_wtContent_wtMainContent_OutSystemsUIWeb_wt85_block_wtColumn2_OutSystemsUIWeb_wt53_block_wtContent_OutSystemsUIWeb_wt138_block_wtAccordionItemWrapper" class="accordion-item is--closed" aria-expanded="false"><div  class="accordion-item-header" role="tab" tabindex="0" aria-hidden="false" aria-expanded="false"><div  id="wt59_OutSystemsUIWeb_wt2_block_wtContent_wtMainContent_OutSystemsUIWeb_wt85_block_wtColumn2_OutSystemsUIWeb_wt53_block_wtContent_OutSystemsUIWeb_wt138_block_wtTitle" class="accordion-item-title" role="button" aria-controls="wt59_OutSystemsUIWeb_wt2_block_wtContent_wtMainContent_OutSystemsUIWeb_wt85_block_wtColumn2_OutSystemsUIWeb_wt53_block_wtContent_OutSystemsUIWeb_wt138_block_wtContent"><div  align="center"><span style="font-size: 24px; font-weight: bold;">GNDI Easy</span></div ></div ><div  class="accordion-item-icon" aria-hidden="true"><span class="fa fa-fw fa-angle-down"></span></div ></div ><div  id="wt59_OutSystemsUIWeb_wt2_block_wtContent_wtMainContent_OutSystemsUIWeb_wt85_block_wtColumn2_OutSystemsUIWeb_wt53_block_wtContent_OutSystemsUIWeb_wt138_block_wtContent" class="accordion-item-content is--collapsed" role="tabpanel" tabindex="0" aria-labelledby="wt59_OutSystemsUIWeb_wt2_block_wtContent_wtMainContent_OutSystemsUIWeb_wt85_block_wtColumn2_OutSystemsUIWeb_wt53_block_wtContent_OutSystemsUIWeb_wt138_block_wtTitle" aria-hidden="true"><div  align="center"><img alt="" src="/TICSMobile/img/Image2.png?124" /></div ><div ><br/><span style="font-style: normal; font-weight: bold;">Descri&#231;&#227;o</span>:<br/>Cuidar da sua sa&#250;de na era digital ficou ainda mais f&#225;cil com o GNDI Easy, o novo aplicativo do Grupo NotreDame Interm&#233;dica. Com ele, voc&#234; tem acesso a servi&#231;os e informa&#231;&#245;es para usufruir melhor os benef&#237;cios do plano de sa&#250;de da NotreDame Interm&#233;dica e/ou odontol&#243;gico da Interodonto. <br/><br/><span style="font-weight: bold;">Fun&#231;&#245;es</span>:<br/>Como a carteirinha passa a ser digital, voc&#234; tem todas as informa&#231;&#245;es na palma da m&#227;o, onde estiver, com a facilidade de compartilh&#225;-la aos dependentes por e-mail ou WhatsApp;<br/>Possibilidade de utilizar a carteirinha digital, sem acesso a Internet;<br/>Verificar a cobertura do plano de sa&#250;de ou odontol&#243;gico;<br/>Na categoria sa&#250;de, agendar e desmarcar consultas de um jeito r&#225;pido e f&#225;cil;<br/>Na categoria odonto, consultar e solicitar o reembolso atrav&#233;s do pr&#243;prio aplicativo. <br/><br/><span style="font-weight: bold;">Link</span>:<br/>https://play.google.com/store/apps/details?id=br.com.gndi.beneficiario.gndieasy  </div ></div ></div ><div  id="wt59_OutSystemsUIWeb_wt2_block_wtContent_wtMainContent_OutSystemsUIWeb_wt85_block_wtColumn2_OutSystemsUIWeb_wt53_block_wtContent_OutSystemsUIWeb_wt40_block_wtAccordionItemWrapper" class="accordion-item is--closed" aria-expanded="false"><div  class="accordion-item-header" role="tab" tabindex="0" aria-hidden="false" aria-expanded="false"><div  id="wt59_OutSystemsUIWeb_wt2_block_wtContent_wtMainContent_OutSystemsUIWeb_wt85_block_wtColumn2_OutSystemsUIWeb_wt53_block_wtContent_OutSystemsUIWeb_wt40_block_wtTitle" class="accordion-item-title" role="button" aria-controls="wt59_OutSystemsUIWeb_wt2_block_wtContent_wtMainContent_OutSystemsUIWeb_wt85_block_wtColumn2_OutSystemsUIWeb_wt53_block_wtContent_OutSystemsUIWeb_wt40_block_wtContent"><div  align="center" style="font-size: 24px;"><span style="font-weight: bold;">Press&#227;o Arterial</span></div ></div ><div  class="accordion-item-icon" aria-hidden="true"><span class="fa fa-fw fa-angle-down"></span></div ></div ><div  id="wt59_OutSystemsUIWeb_wt2_block_wtContent_wtMainContent_OutSystemsUIWeb_wt85_block_wtColumn2_OutSystemsUIWeb_wt53_block_wtContent_OutSystemsUIWeb_wt40_block_wtContent" class="accordion-item-content is--collapsed" role="tabpanel" tabindex="0" aria-labelledby="wt59_OutSystemsUIWeb_wt2_block_wtContent_wtMainContent_OutSystemsUIWeb_wt85_block_wtColumn2_OutSystemsUIWeb_wt53_block_wtContent_OutSystemsUIWeb_wt40_block_wtTitle" aria-hidden="true"><div  align="center"><img alt="" src="/TICSMobile/img/Image3.png?124" /></div ><div ><br/><span style="font-weight: bold;">Descri&#231;&#227;o</span>:<br/>Esta aplica&#231;&#227;o ajuda a controlar a press&#227;o arterial e melhora o m&#233;todo de tratar a hipertens&#227;o.<br/>Com ela, voc&#234; pode facilmente armazenar e analisar todas as suas medi&#231;&#245;es.<br/>Ela tamb&#233;m gera informa&#231;&#245;es auxiliares necess&#225;rias para o tratamento adequado da hipertens&#227;o arterial, que voc&#234; pode enviar diretamente para o seu m&#233;dico com os relat&#243;rios gerados automaticamente. <br/><br/><span style="font-weight: bold;">Fun&#231;&#245;es</span>:<br/>Principais Recursos:<br/>Interface de usu&#225;rio f&#225;cil de utilizar, Grave, edite e atualize suas medi&#231;&#245;es,Descreva seus registros, Tags - escreva descri&#231;&#245;es curtas e use-as v&#225;rias vezes, Data e Hora da medi&#231;&#227;o de press&#227;o, Valores(sist&#243;lica, diast&#243;lica, pulsa&#231;&#227;o e peso), Descri&#231;&#227;o, Suporte para m&#250;ltiplos usu&#225;rios, Tabelas interativas, Estat&#237;sticas, Exporta dados: CSV, XML, PDF - relat&#243;rios detalhados, Capturas de tela, Lembretes, Filtros - possibilidades ilimitadas em suas m&#227;os. Decida quais dados o aplicativo ir&#225; mostrar, analisar ou exportar!, Apar&#234;ncia - customize a apar&#234;ncia do aplicativo conforme sua necessidade, Categorias: JNC7, JNC8, ESH/ESC, Hipertens&#227;o Isolada, Hipotomia.  <br/><br/><span style="font-weight: bold;">Link</span>:<br/>https://play.google.com/store/apps/details?id=com.szyk.myheart </div ></div ></div ><div  id="wt59_OutSystemsUIWeb_wt2_block_wtContent_wtMainContent_OutSystemsUIWeb_wt85_block_wtColumn2_OutSystemsUIWeb_wt53_block_wtContent_OutSystemsUIWeb_wt38_block_wtAccordionItemWrapper" class="accordion-item is--closed" aria-expanded="false"><div  class="accordion-item-header" role="tab" tabindex="0" aria-hidden="false" aria-expanded="false"><div  id="wt59_OutSystemsUIWeb_wt2_block_wtContent_wtMainContent_OutSystemsUIWeb_wt85_block_wtColumn2_OutSystemsUIWeb_wt53_block_wtContent_OutSystemsUIWeb_wt38_block_wtTitle" class="accordion-item-title" role="button" aria-controls="wt59_OutSystemsUIWeb_wt2_block_wtContent_wtMainContent_OutSystemsUIWeb_wt85_block_wtColumn2_OutSystemsUIWeb_wt53_block_wtContent_OutSystemsUIWeb_wt38_block_wtContent"><div  align="center" style="font-size: 24px;"><span style="font-weight: bold;">FreeStyle LibreLink</span></div ></div ><div  class="accordion-item-icon" aria-hidden="true"><span class="fa fa-fw fa-angle-down"></span></div ></div ><div  id="wt59_OutSystemsUIWeb_wt2_block_wtContent_wtMainContent_OutSystemsUIWeb_wt85_block_wtColumn2_OutSystemsUIWeb_wt53_block_wtContent_OutSystemsUIWeb_wt38_block_wtContent" class="accordion-item-content is--collapsed" role="tabpanel" tabindex="0" aria-labelledby="wt59_OutSystemsUIWeb_wt2_block_wtContent_wtMainContent_OutSystemsUIWeb_wt85_block_wtColumn2_OutSystemsUIWeb_wt53_block_wtContent_OutSystemsUIWeb_wt38_block_wtTitle" aria-hidden="true"><div  align="center"><img alt="" src="/TICSMobile/img/Image4.png?124" /></div ><div ><br/><span style="font-weight: bold;">Descri&#231;&#227;o</span>:<br/>O aplicativo FreeStyle LibreLink &#233; aprovado para uso com o sensor FreeStyle Libre. Agora, voc&#234; poder&#225; monitorar sua glicose pelo celular sem os testes de glicemia capilar de rotina! [1] Verifique seu n&#237;vel de glicose aproximando o celular do sensor. <br/><br/><span style="font-weight: bold;">Fun&#231;&#245;es</span>:<br/>Voc&#234; pode usar o aplicativo para:<br/>-Ver a leitura do seu n&#237;vel de glicose atual, a seta de tend&#234;ncia e o hist&#243;rico do n&#237;vel de glicose<br/>-Adicionar notas para monitorar seus alimentos, uso de insulina e exerc&#237;cios<br/>-Ver os relat&#243;rios do n&#237;vel de glicose, incluindo seu Perfil de glicose ambulatorial<br/>-Conectar-se a profissionais de sa&#250;de e cuidadores com o LibreView e o LibreLinkUp<br/><br/><span style="font-weight: bold;">Link</span>:<br/>https://play.google.com/store/apps/details?id=com.freestylelibre.app.br </div ></div ></div ><div  id="wt59_OutSystemsUIWeb_wt2_block_wtContent_wtMainContent_OutSystemsUIWeb_wt85_block_wtColumn2_OutSystemsUIWeb_wt53_block_wtContent_OutSystemsUIWeb_wt81_block_wtAccordionItemWrapper" class="accordion-item is--closed" aria-expanded="false"><div  class="accordion-item-header" role="tab" tabindex="0" aria-hidden="false" aria-expanded="false"><div  id="wt59_OutSystemsUIWeb_wt2_block_wtContent_wtMainContent_OutSystemsUIWeb_wt85_block_wtColumn2_OutSystemsUIWeb_wt53_block_wtContent_OutSystemsUIWeb_wt81_block_wtTitle" class="accordion-item-title" role="button" aria-controls="wt59_OutSystemsUIWeb_wt2_block_wtContent_wtMainContent_OutSystemsUIWeb_wt85_block_wtColumn2_OutSystemsUIWeb_wt53_block_wtContent_OutSystemsUIWeb_wt81_block_wtContent"><div  align="center" style="font-size: 24px; font-weight: bold;">Agenda F&#225;cil-Prefeitura SP</div ></div ><div  class="accordion-item-icon" aria-hidden="true"><span class="fa fa-fw fa-angle-down"></span></div ></div ><div  id="wt59_OutSystemsUIWeb_wt2_block_wtContent_wtMainContent_OutSystemsUIWeb_wt85_block_wtColumn2_OutSystemsUIWeb_wt53_block_wtContent_OutSystemsUIWeb_wt81_block_wtContent" class="accordion-item-content is--collapsed" role="tabpanel" tabindex="0" aria-labelledby="wt59_OutSystemsUIWeb_wt2_block_wtContent_wtMainContent_OutSystemsUIWeb_wt85_block_wtColumn2_OutSystemsUIWeb_wt53_block_wtContent_OutSystemsUIWeb_wt81_block_wtTitle" aria-hidden="true"><div  align="center"><img alt="" src="/TICSMobile/img/Image5.png?124" /></div ><div ><br/><span style="font-weight: bold;">Descri&#231;&#227;o</span>:<br/>O Agenda F&#225;cil &#233; um aplicativo oficial para agendamento de consultas e exames na Cidade de S&#227;o Paulo-SP (Capital).<br/><br/><span style="font-weight: bold;">Fun&#231;&#245;es</span>:<br/>Al&#233;m do agendamento de consultas e exames, o Agenda F&#225;cil permite que o usu&#225;rio acompanhe todos os procedimentos agendados, pr&#233;-agendados ou em fila de espera. Nos dois primeiros casos, ser&#227;o fornecidos a data, o hor&#225;rio, o nome da unidade e o endere&#231;o em que a consulta ou o exame ser&#225; realizado. O usu&#225;rio tamb&#233;m pode desmarcar procedimentos, caso n&#227;o possa comparecer. <br/><br/><span style="font-weight: bold;">Link</span>: <br/>https://play.google.com/store/apps/details?id=saude.prefeitura.sp.gov.br.autoagendamento </div ></div ></div ></div ><script>// Waits elements render and inits the accordion
-var accordionDOMReadyHandler = function() {
-    var accordion = new newAccordion();
-    accordion.init('wt59_OutSystemsUIWeb_wt2_block_wtContent_wtMainContent_OutSystemsUIWeb_wt85_block_wtColumn2_OutSystemsUIWeb_wt53_block_wtContent', 'false');
-};
-
-if(document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', accordionDOMReadyHandler);
-} else {
-    accordionDOMReadyHandler();
-}
-</script></div ></div ></div ></main ><footer  class="content-bottom" role="contentinfo"><div  id="wt59_OutSystemsUIWeb_wt2_block_wtContent_wtFooter" class="footer ThemeGrid_Container ph"></div ></footer ></div ></div ></div >
-    <script type="text/javascript">outsystems.internal.$.get("/TICSMobile/_status.aspx")</script>
-<script type="text/javascript">
-//<![CDATA[
-var OsPage_Validators =  new Array({});
-//]]>
-</script>
-
-
-<script type="text/javascript">
-//<![CDATA[
-var OsPage_ValidationActive = false;
-OsValidatorOnLoad();
-
-function OsValidatorOnSubmit() {
-  if (OsPage_ValidationActive) { return OsValidatorCommonOnSubmit(); }
-  return true;
-}
-// ]]>
-</script>
-</form><script type="text/javascript">outsystems.internal.$._waitForViewstate = true;outsystems.internal.$(document).ready(function() {outsystems.internal.$('input[name=__OSVSTATE]').val('0mczMBPO7nl9B54u//FDLFpWbATorUJz/sGAP5LX+qxX8jfsAXq7tVpGfJ6j82EGZftuOMF6v+bGeiF5fJ/ZTAHno06rIlc1o8DFFLCduoadaRzggkkqB2Krr1niZhgYpsR8LACz0iUXCcovApXjiuXtUZuRUku2r7vXMaORrIcrlVNlORp04nW3bOjHuVd2RoKeUa3TxCo1j0ZBK9J8vw==');outsystems.internal.$._waitForViewstate = false;});</script>
-<!-- Begin Inbox Block --><link href="/EPA_Taskbox/Blocks/EPA_Taskbox/Inbox_Flow/Inbox.css?7" type="text/css" rel="stylesheet" /><script src="/EPA_Taskbox/Blocks/EPA_Taskbox/Inbox_Flow/Inbox.js?7" type="text/javascript" charset="UTF-8"></script><div><span id="epa_wtEPATaskbox_ViewOptions_JS"><script language="javascript">var EPATaskbox_ViewOptions = { allowGlow : false, pollInterval : 20, maxPollInterval : 1800, cookieTimeout : 2, applicationServer : ".Net", developmentMode : true};</script></span><!--[if gte IE 5.5]><![if lt IE 7]><style type="text/css">div#epa_wtEPATaskbox_ExtraStylesContainer {  _right: auto; _bottom: auto; _left: expression( ( -95 - epa_wtEPATaskbox_ExtraStylesContainer.offsetWidth + ( document.documentElement.clientWidth ? document.documentElement.clientWidth : document.body.clientWidth ) + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' ); _top: expression( ( -95 - epa_wtEPATaskbox_ExtraStylesContainer.offsetHeight + ( document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight ) + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );}</style><![endif]><![if gte IE 7]><script>if(document.compatMode == 'BackCompat') { window.attachEvent('onload', function() { var div = document.createElement('div'); div.style.display = 'none'; div.innerHTML = "style<style type=\"text/css\">"+ " div#epa_wtEPATaskbox_ExtraStylesContainer { "+ "  "+ " _right: auto; _bottom: auto; "+ " _left: expression( ( -51 - epa_wtEPATaskbox_ExtraStylesContainer.offsetWidth + ( document.documentElement.clientWidth ? document.documentElement.clientWidth : document.body.clientWidth ) + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' ); "+ " _top: expression( ( -95 - epa_wtEPATaskbox_ExtraStylesContainer.offsetHeight + ( document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight ) + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' ); "+ " } "+ " </style>"; document.body.appendChild(div);});};</script><![endif]><![endif]--><div id="epa_wtEPATaskbox_Container" class="EPATaskbox_Container"><div id="epa_wtEPATaskbox_ExtraStylesContainer" class="EPATaskbox_ExtraStylesContainer"><div class="EPATaskbox_IconifiedContainer"><div class="EPATaskbox_Icon_EPATaskbox_NotGlowing"></div><div class="EPATaskbox_Icon_EPATaskbox_Glowing"></div><div class="EPATaskbox_ActivityCount"></div></div><div class="EPATaskbox_ExpandedContainer"><div class="EPATaskbox_ExpandedIcon_EPATaskbox_NotGlowing"></div><div class="EPATaskbox_ExpandedIcon_EPATaskbox_Glowing"></div><div class="EPATaskbox_ExpandedText">Click here to see your activities</div></div><div class="EPATaskbox_OpenedContainer"><div class="EPATaskbox_FrameContainer"></div></div></div></div></div><!-- End Inbox Block -->
-  </body>
+<body>
+	<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg" style="undefined;table-layout: fixed; width: 605px">
+<colgroup>
+<col style="width: 55px">
+<col style="width: 328px">
+<col style="width: 71px">
+<col style="width: 74px">
+<col style="width: 77px">
+</colgroup>
+  <tr>
+    <th class="tg-c3ow">Id</th>
+    <th class="tg-0pky">Título</th>
+    <th class="tg-0pky">Autor</th>
+    <th class="tg-c3ow">Ano</th>
+    <th class="tg-c3ow">referência</th>
+  </tr>
+  <tr>
+    <td class="tg-c3ow" colspan="5">Practical improvements</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">S1</td>
+    <td class="tg-0pky">Microblogging in Open Source Software Development: The Case of Drupal and Twitter</td>
+    <td class="tg-c3ow">Wang, X. and Kuzmickaja, I. and Stol, K. and Abrahamsson, P. and Fitzgerald, B.</td>
+    <td class="tg-c3ow">2014</td>
+    <td class="tg-c3ow">[1]</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">S2</td>
+    <td class="tg-0pky">Toward an Understanding of the Motivation Open Source Software Developers</td>
+    <td class="tg-0pky">Ye, Yunwen and Kishida, Kouichi</td>
+    <td class="tg-c3ow">2003</td>
+    <td class="tg-c3ow">[2]</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">S3</td>
+    <td class="tg-0pky">The organization of open source communities: Towards a framework to analyze the relationship between openness and reliability</td>
+    <td class="tg-0pky">Joode, R. van Wendel de and Bruijne, M. de</td>
+    <td class="tg-c3ow">2006</td>
+    <td class="tg-c3ow">[3]</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">S4</td>
+    <td class="tg-0pky">What Makes an Open Source Code Popular on Git Hub?</td>
+    <td class="tg-0pky">Weber, S. and Luo, J.</td>
+    <td class="tg-c3ow">2014</td>
+    <td class="tg-c3ow">[4]</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">S5</td>
+    <td class="tg-0pky">Comparison of big data analyses for reliable open source software</td>
+    <td class="tg-0pky">Tamura, Y. and Yamada, S.</td>
+    <td class="tg-c3ow">2016</td>
+    <td class="tg-c3ow">[5]</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">S6</td>
+    <td class="tg-0pky">We Don’t Need Another Hero?: The Impact of "Heroes" on Software Development</td>
+    <td class="tg-0pky">Agrawal, A. and Rahman, A. and Krishna, R. and Sobran, A. and Menzies, T.</td>
+    <td class="tg-c3ow">2017</td>
+    <td class="tg-c3ow">[6]</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">S7</td>
+    <td class="tg-0pky">Evaluating the Effects of Architectural Documentation: A Case Study of a Large Scale Open Source Project</td>
+    <td class="tg-0pky">Kazman, R. and Goldenson, D. and Monarch, I. and Nichols, W. and Valetto, G.</td>
+    <td class="tg-c3ow">2016</td>
+    <td class="tg-c3ow">[7]</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">S8</td>
+    <td class="tg-0pky">Software architecture in an open source world</td>
+    <td class="tg-0pky">Fielding, R. T.</td>
+    <td class="tg-c3ow">2005</td>
+    <td class="tg-c3ow">[8]</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">S9</td>
+    <td class="tg-0pky">Open Source Drives Innovation</td>
+    <td class="tg-0pky">Ebert, C.</td>
+    <td class="tg-c3ow">2007</td>
+    <td class="tg-c3ow">[9]</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">S10</td>
+    <td class="tg-0pky">Towards Promoting Design and UML Modeling Practices in the Open Source Community</td>
+    <td class="tg-0pky">Aldaeej, A. and Badreddin, O.He, Z. and Yan, H. and Liu, C.</td>
+    <td class="tg-c3ow">2016</td>
+    <td class="tg-c3ow">[10]</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">S11</td>
+    <td class="tg-0pky">Improvement on ABDOM-Qd and Its Application in Open-Source Community Software Defect Discovery Process</td>
+    <td class="tg-0pky">He, Z. and Yan, H. and Liu, C.</td>
+    <td class="tg-c3ow">2013</td>
+    <td class="tg-c3ow">[11]</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">S12</td>
+    <td class="tg-0pky">Software process: the key to developing robust, reusable and maintainable open-source software</td>
+    <td class="tg-0pky">Schroeder, W. J. and Ibanez, L. and Martin, K. M.</td>
+    <td class="tg-c3ow">2004</td>
+    <td class="tg-c3ow">[12]</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">S13</td>
+    <td class="tg-0pky">Semantic tools for improving software development in open source communities</td>
+    <td class="tg-0pky">Leban, Gregor</td>
+    <td class="tg-c3ow">2013</td>
+    <td class="tg-c3ow">[13]</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow" colspan="5">Aspects analysis</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">S14</td>
+    <td class="tg-0pky">Evaluating Quality of Open Source Components for Reuse-Intensive Commercial Solutions</td>
+    <td class="tg-0pky">Rudzki, J. and Kiviluoma, K. and Poikonen, T. and Hammouda, I.</td>
+    <td class="tg-c3ow">2009</td>
+    <td class="tg-c3ow">[14]</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">S15</td>
+    <td class="tg-0pky">Ranking open source software based on crowd wisdom</td>
+    <td class="tg-0pky">Fan, Q. and Wang, H. and Yin, G. and Wang, T.</td>
+    <td class="tg-c3ow">2015</td>
+    <td class="tg-c3ow">[15]</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">S16</td>
+    <td class="tg-0pky">The QualOSS open source assessment model measuring the performance of open source communities</td>
+    <td class="tg-0pky">Soto, M. and Ciolkowski, M.</td>
+    <td class="tg-c3ow">2009</td>
+    <td class="tg-c3ow">[16]</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">S17</td>
+    <td class="tg-0pky">Measuring the Evolution of Open Source Software Systems with Their Communities</td>
+    <td class="tg-0pky">Wang, Yi and Guo, Defeng and Shi, Huihui</td>
+    <td class="tg-c3ow">2007</td>
+    <td class="tg-c3ow">[17]</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">S18</td>
+    <td class="tg-0pky">A reference model for evaluating performance of open source community</td>
+    <td class="tg-0pky">An, S. and Wang, X. and Liu, L.</td>
+    <td class="tg-c3ow">2011</td>
+    <td class="tg-c3ow">[18]</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">S19</td>
+    <td class="tg-0pky">Estimating Development Effort in Free/Open Source Software Projects by Mining Software Repositories: A Case Study of OpenStack</td>
+    <td class="tg-0pky">Robles, Gregorio and González-Barahona, Jesús M. and Cervigón, Carlos and Capiluppi, Andrea and Izquierdo-Cortázar, Daniel</td>
+    <td class="tg-c3ow">2014</td>
+    <td class="tg-c3ow">[19]</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">S20</td>
+    <td class="tg-0pky">How does contributors involvement influence open source systems</td>
+    <td class="tg-0pky">Alfayez, R. and Behnamghader, P. and Srisopha, K. and Boehm, B.</td>
+    <td class="tg-c3ow">2017</td>
+    <td class="tg-c3ow">[20]</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">S21</td>
+    <td class="tg-0pky">On the Impact of Being Open</td>
+    <td class="tg-0pky">Schuwer, R. and Genuchten, M. van and Hatton, L.</td>
+    <td class="tg-c3ow">2015</td>
+    <td class="tg-c3ow">[21]</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">S22</td>
+    <td class="tg-0pky">A Case Study: Open Source Community and the Commercial Enterprise</td>
+    <td class="tg-0pky">Gary, K. and Koehnemann, H. and Blakley, J. and Goar, C. and Mann, H. and Kagan, A.</td>
+    <td class="tg-c3ow">2009</td>
+    <td class="tg-c3ow">[22]</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">S23</td>
+    <td class="tg-0pky">Inner Source–Adopting Open Source Development Practices in Organizations: A Tutorial</td>
+    <td class="tg-0pky">Stol, K. and Fitzgerald, B.</td>
+    <td class="tg-c3ow">2015</td>
+    <td class="tg-c3ow">[23]</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">S24</td>
+    <td class="tg-0pky">Open Source Software: Is It Worth Converting?</td>
+    <td class="tg-0pky">Laplante, P. and Gold, A. and Costello, T.</td>
+    <td class="tg-c3ow">2007</td>
+    <td class="tg-c3ow">[24]</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">S25</td>
+    <td class="tg-0pky">Reliability Growth of Open Source Software Using Defect Analysis</td>
+    <td class="tg-0pky">Syed-Mohamad, S. M. and McBride, T.</td>
+    <td class="tg-c3ow">2008</td>
+    <td class="tg-c3ow">[25]</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">S26</td>
+    <td class="tg-0pky">A Survey on Open Source Software Trustworthiness</td>
+    <td class="tg-0pky">Bianco, V. del and Lavazza, L. and Morasca, S. and Taibi, D.</td>
+    <td class="tg-c3ow">2011</td>
+    <td class="tg-c3ow">[26]</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">S27</td>
+    <td class="tg-0pky">A systematic review of research on open source software in commercial software product development</td>
+    <td class="tg-0pky">Höst, Martin and Oručević-Alagić, Alma</td>
+    <td class="tg-c3ow">2011</td>
+    <td class="tg-c3ow">[27]</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">S28</td>
+    <td class="tg-0pky">Using open source projects in higher education: A two-way certification framework</td>
+    <td class="tg-0pky">Papadopoulos, Pantelis M. and Stamelos, Ioannis G. and Cerone, Antonio</td>
+    <td class="tg-c3ow">2014</td>
+    <td class="tg-c3ow">[28]</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow" colspan="5">Open Source teaching</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">S29</td>
+    <td class="tg-0pky">What can software engineering students learn from studying open source software?</td>
+    <td class="tg-0pky">Carrington, D.A.</td>
+    <td class="tg-c3ow">2008</td>
+    <td class="tg-c3ow">[29]</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">S30</td>
+    <td class="tg-0pky">Poster: Understanding newcomers success in open source community</td>
+    <td class="tg-0pky">Bayati, S.</td>
+    <td class="tg-c3ow">2018</td>
+    <td class="tg-c3ow">[30]</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">S31</td>
+    <td class="tg-0pky">Training Software Engineers Using Open-Source Software: The Professors’ Perspective</td>
+    <td class="tg-0pky">Pinto, G. H. L. and Filho, F. F. and Steinmacher, I. and Gerosa, M. A.</td>
+    <td class="tg-c3ow">2017</td>
+    <td class="tg-c3ow">[31]</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">S32</td>
+    <td class="tg-0pky">Integrating Open Source Software into software engineering curriculum: Challenges in selecting projects</td>
+    <td class="tg-0pky">Gokhale, S. S. and Smith, T. and McCartney, R.</td>
+    <td class="tg-c3ow">2012</td>
+    <td class="tg-c3ow">[32]</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">S33</td>
+    <td class="tg-0pky">Teaching Evolution of Open-Source Projects in Software Engineering Courses</td>
+    <td class="tg-0pky">Buchta, J. and Petrenko, M. and Poshyvanyk, D. and Rajlich, V.</td>
+    <td class="tg-c3ow">2006</td>
+    <td class="tg-c3ow">[33]</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">S34</td>
+    <td class="tg-0pky">Experiences with Open Source Software Engineering Tools</td>
+    <td class="tg-0pky">Toth, K.</td>
+    <td class="tg-c3ow">2006</td>
+    <td class="tg-c3ow">[34]</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">S35</td>
+    <td class="tg-0pky">Enriching software engineering courses with service-learning projects and the open-source approach</td>
+    <td class="tg-0pky">Liu, Chang</td>
+    <td class="tg-c3ow">2005</td>
+    <td class="tg-c3ow">[35]</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">S36</td>
+    <td class="tg-0pky">Software engineering education in the era of outsourcing, distributed development, and open source software: challenges and opportunities</td>
+    <td class="tg-0pky">Hawthorne, M. J. and Perry, D. E.</td>
+    <td class="tg-c3ow">2005</td>
+    <td class="tg-c3ow">[36]</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">S37</td>
+    <td class="tg-0pky">Utilizing open source software in teaching practice-based software engineering courses</td>
+    <td class="tg-0pky">Dorodchi, M. and Dehbozorgi, N.</td>
+    <td class="tg-c3ow">2016</td>
+    <td class="tg-c3ow">[37]</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">S38</td>
+    <td class="tg-0pky">How Successful Open Source Projects Work, and How and Why to Introduce Students to the Open Source World</td>
+    <td class="tg-0pky">DeKoenigsberg, G.</td>
+    <td class="tg-c3ow">2008</td>
+    <td class="tg-c3ow">[38]</td>
+  </tr>
+</table>
+</body>
 </html>
