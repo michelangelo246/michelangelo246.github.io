@@ -1,0 +1,210 @@
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#bbb;margin:0px auto;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#bbb;color:#594F4F;background-color:#E0FFEB;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#bbb;color:#493F3F;background-color:#9DE0AD;}
+.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+@media screen and (max-width: 767px) {.tg {width: auto !important;}.tg col {width: auto !important;}.tg-wrap {overflow-x: auto;-webkit-overflow-scrolling: touch;margin: auto 0px;}}</style>
+<div class="tg-wrap"><table class="tg" style="undefined;table-layout: fixed; width: 1221px">
+<colgroup>
+<col style="width: 95px">
+<col style="width: 833px">
+<col style="width: 215px">
+<col style="width: 43px">
+<col style="width: 35px">
+</colgroup>
+  <tr>
+    <th class="tg-c3ow">Id</th>
+    <th class="tg-0pky">Title</th>
+    <th class="tg-0pky">Author</th>
+    <th class="tg-c3ow">Year</th>
+    <th class="tg-c3ow">Ref</th>
+  </tr>
+  <tr>
+    <td class="tg-c3ow" colspan="5">Practical Improvements</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow"></td>
+    <td class="tg-0pky">REACT - A Process for Improving Open-Source Software Reuse</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-c3ow"></td>
+    <td class="tg-c3ow"></td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow"></td>
+    <td class="tg-0pky">Machine Learning Approach for Reliability Assessment of Open Source Software</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-c3ow"></td>
+    <td class="tg-c3ow"></td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow"></td>
+    <td class="tg-0pky">Analysis and Detection of Information Types of Open Source Software Issue Discussions</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-c3ow"></td>
+    <td class="tg-c3ow"></td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow"></td>
+    <td class="tg-0pky">Team Activities Measurement Method for Open Source Software Development Using the Gini Coefficient</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-c3ow"></td>
+    <td class="tg-c3ow"></td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow"></td>
+    <td class="tg-0pky">Modelling Risks in Open Source Software Component Selection</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-c3ow"></td>
+    <td class="tg-c3ow"></td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow"></td>
+    <td class="tg-0pky">Characterizing and predicting blocking bugs in open source projects</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-c3ow"></td>
+    <td class="tg-c3ow"></td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow" colspan="5">Open Source aspects analysis</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow"></td>
+    <td class="tg-0pky">Affiliated Participation in Open Source Communities</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-c3ow"></td>
+    <td class="tg-c3ow"></td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow"></td>
+    <td class="tg-0pky">What makes a good contributor? Understanding contributor behavior within large Free/Open Source Software projects – A socialization perspective</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-c3ow"></td>
+    <td class="tg-c3ow"></td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow"></td>
+    <td class="tg-0pky">Characterizing the Roles of Contributors in Open-source Scientific Software Projects</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-c3ow"></td>
+    <td class="tg-c3ow"></td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow"></td>
+    <td class="tg-0pky">Diversity and Inclusion in Open Source Software (OSS) Projects: Where Do We Stand?</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-c3ow"></td>
+    <td class="tg-c3ow"></td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow"></td>
+    <td class="tg-0pky">How Practitioners Perceive Coding Proficiency</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-c3ow"></td>
+    <td class="tg-c3ow"></td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow"></td>
+    <td class="tg-0pky">Why Does Code Review Work for Open Source Software Communities?</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-c3ow"></td>
+    <td class="tg-c3ow"></td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow" colspan="5">Advantages/Disadvantages of Open Source</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow"></td>
+    <td class="tg-0pky">Investigating Open Source Software Benefits in Public Sector</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-c3ow"></td>
+    <td class="tg-c3ow"></td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow"></td>
+    <td class="tg-0pky">Critical Barriers to Business Intelligence Open Source Software Adoption</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-c3ow"></td>
+    <td class="tg-c3ow"></td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow"></td>
+    <td class="tg-0pky">Beyond free software: {An} exploration of the business value of strategic open source</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-c3ow"></td>
+    <td class="tg-c3ow"></td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow"></td>
+    <td class="tg-0pky">Adoption of Free Libre Open Source Software (FLOSS): A Risk Management Perspective</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-c3ow"></td>
+    <td class="tg-c3ow"></td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow"></td>
+    <td class="tg-0pky">Benefits of Open Source Software in Defense Environments</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-c3ow"></td>
+    <td class="tg-c3ow"></td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow"></td>
+    <td class="tg-0pky">Economic Benefits of Free and Open Source Software: An Evaluation for Health Sector</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-c3ow"></td>
+    <td class="tg-c3ow"></td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow" colspan="5">Open Source Newcomers</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-c3ow"></td>
+    <td class="tg-c3ow"></td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow"></td>
+    <td class="tg-0pky">Overcoming Open Source Project Entry Barriers with a Portal for Newcomers</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-c3ow"></td>
+    <td class="tg-c3ow"></td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow"></td>
+    <td class="tg-0pky">Training Software Engineers sing Open-Source Software: The Students’ Perspective</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-c3ow"></td>
+    <td class="tg-c3ow"></td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow"></td>
+    <td class="tg-0pky">What Attract Newcomers to Onboard on OSS Projects? TL;DR: Popularity</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-c3ow"></td>
+    <td class="tg-c3ow"></td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow"></td>
+    <td class="tg-0pky">Exploring and Expanding GSE Education with Open Source Software Development</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-c3ow"></td>
+    <td class="tg-c3ow"></td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow"></td>
+    <td class="tg-0pky">Let Me In: Guidelines for the Successful Onboarding of Newcomers to Open Source Projects</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-c3ow"></td>
+    <td class="tg-c3ow"></td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow"></td>
+    <td class="tg-0pky">Teaching Software Engineering with Free Open Source Software Development:An Experience Report</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-c3ow"></td>
+    <td class="tg-c3ow"></td>
+  </tr>
+</table></div>
