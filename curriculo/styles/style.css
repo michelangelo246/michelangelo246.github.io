@@ -29,7 +29,7 @@
         }
         .layer:first-child
         {
-            color: #c0e3e7;
+            color: white;
             border-radius: 8px;
             background: rgba(125,125,125,0.8);
             border: 0
@@ -46,10 +46,14 @@
             text-transform: uppercase;
             font-weight: bolder;
         }
+        .layer:first-child i
+        {
+            color: #c0e3e7;
+        }
         .profile-pic
         {
-            background-image: url("../img/myself.jpg");
-            background-position: right 50% bottom 50%;
+            background-image: url("../img/myself2.jpg");
+            background-position: right 80% bottom 50%;
             background-size: auto 200px;
             object-fit: cover;
             height: 200px;
