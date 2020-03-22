@@ -1,0 +1,15 @@
+<svg width="580" height="400" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <g>
+  <title>background</title>
+  <rect fill="#ffffff" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <path stroke="#000" transform="rotate(125.41468811035156 72.53182220458986,209.03643798828122) " id="svg_22" d="m-110.891685,362.709915l0,-307.346944l366.847005,307.346944l-366.847005,0z" stroke-opacity="null" stroke-width="0" fill="#DDDDDD"/>
+  <path stroke="#000" transform="rotate(176.19895935058594 440.51422119140625,115.61540222167967) " id="svg_23" d="m250.380854,267.536839l0,-303.842884l380.266725,303.842884l-380.266725,0z" stroke-opacity="null" stroke-width="0" fill="#c0e3e7"/>
+ </g>
+</svg>
